@@ -15,7 +15,7 @@ def get_data_lambda():
     return values
  
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
-SAMPLE_SPREADSHEET_ID = '1M8Zi_FzRu2epzJXo4KRkLvCbU-33X4_r1yVRfm-4Rok'
+SAMPLE_SPREADSHEET_ID = '1M8Zi_FzRu2epzJXo4KRkLvCbU-33X4_r1yVRfm-4Rok/'
 SAMPLE_RANGE_NAME = 'A:B'
  
 class handler(BaseHTTPRequestHandler):
