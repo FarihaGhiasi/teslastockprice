@@ -37,11 +37,12 @@ class handler(BaseHTTPRequestHandler):
             "auth_provider_x509_cert_url": os.environ.get("auth_provider_x509_cert_url"),
             "client_x509_cert_url": os.environ.get("client_x509_cert_url")
         }
-        print(service_account_credentials)
+      
         credentials = service_account.Credentials.from_service_account_info(
             service_account_credentials, scopes=SCOPES)
         service = build('sheets', 'v4', credentials=credentials)
         values_list = list(values.values())
+        print(values_list)
         final_list = []
         final_list.append(values_list)
         dict_me = dict(values=final_list)
