@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import gspread
 from google.oauth2.service_account import Credentials
+import matplotlib as plt
+
 
 def get_data():
     # Define the scopes for Google Sheets and Google Drive APIs
@@ -44,3 +46,16 @@ st.title("Historical Trend of Tesla (TSLA) Stock Closing and Opening Prices")
 
 # Display the line chart using Streamlit
 st.line_chart(df[['close', 'open']])  # Adjust the columns as per your preference
+
+
+
+# Price Range Plot
+st.subheader("Price Range")
+st.bar_chart(df[['high', 'low']])
+
+st.subheader("Volume Distribution")
+st.area_chart(df['volume'])
+
+
+
+
